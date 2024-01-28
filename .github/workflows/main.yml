@@ -38,9 +38,9 @@ jobs:
       run: git checkout -b pages
 
     - name: Remove all files except dist
-      run: ls | grep -v dist | xargs rm -rf
+      run: ls | grep -v dist | xargs rm -rf || true
 
-    - name: Copy Dist Files to Pages Branch
+    - name: Move Dist Files to Pages Branch
       run: mv dist/* .
 
     - name: Remove Dist Directory
