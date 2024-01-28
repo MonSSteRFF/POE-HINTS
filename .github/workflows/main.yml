@@ -15,6 +15,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
@@ -49,6 +50,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-artifact
+
       - name: Display structure of downloaded files
         run: ls -R
 
