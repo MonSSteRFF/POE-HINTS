@@ -18,7 +18,9 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "types": ["jest"]
+    "types": [
+      "jest"
+    ]
   },
   "include": ["src", "vite.config.ts"],
 }
