@@ -25,6 +25,9 @@ jobs:
     - name: Build Application
       run: npm run build
 
+    - name: Save Dist Files
+      run: mv dist $GITHUB_WORKSPACE/dist
+
   deploy:
     runs-on: ubuntu-latest
 
@@ -37,21 +40,16 @@ jobs:
     - name: Switch to Pages Branch
       run: git checkout -b pages
 
-    - name: Move to Dist Directory
-      run: cd dist
+    - name: Remove existing files in Pages
+      run: rm -rf *
 
-    - name: Initialize Git in Dist
-      run: git init
+    - name: Copy Dist Files to Pages Branch
+      run: cp -r $GITHUB_WORKSPACE/dist/* .
 
-    - name: Configure Git Identity
+    - name: Commit and Push to Pages Branch
       run: |
-        git config user.email "actions@github.com"
-        git config user.name "GitHub Actions"
-
-    - name: Add and Commit Changes
-      run: |
+        git config --global user.email "actions@github.com"
+        git config --global user.name "GitHub Actions"
         git add .
         git commit -m "Auto-deploy dist files"
-
-    - name: Push to Pages Branch
-      run: git push --force origin pages
+        git push origin pages
