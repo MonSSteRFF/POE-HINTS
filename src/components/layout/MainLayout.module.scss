@@ -1,0 +1,8 @@
+@use '@/styles/uiKit' as *;
+
+.main {
+  min-height: 100dvh;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  @extend %container;
+}

@@ -1,0 +1,27 @@
+@mixin font($fw, $fs, $lh) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}
+
+%f200 {
+  &_12_14 {
+    @include font(200, 12px, 14px)
+  }
+}
+
+%f400 {
+  &_14_16 {
+    @include font(400, 14px, 16px)
+  }
+  &_18_20 {
+    @include font(400, 18px, 20px)
+  }
+}
+
+%f600 {
+  &_18_22 {
+    @include font(600, 18px, 22px)
+  }
+}
+
