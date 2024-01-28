@@ -63,4 +63,4 @@ jobs:
           git config --global user.name "GitHub Actions"
           git add .
           git commit -m "Auto-deploy dist files"
-          git push origin pages
+          git push origin HEAD:refs/heads/pages
