@@ -29,11 +29,8 @@ jobs:
 
       - name: Check if 'pages' branch exists
         run: |
-          if [ -z "$(git ls-remote --heads origin pages)" ]; then
-            git checkout -b pages
-          else
-            git checkout pages
-          fi
+          git fetch origin pages:pages
+          git checkout pages || git checkout -b pages
 
       - name: Copy files to Pages branch
         run: |
