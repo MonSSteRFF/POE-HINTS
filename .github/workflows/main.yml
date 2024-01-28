@@ -25,8 +25,11 @@ jobs:
     - name: Build Application
       run: npm run build
 
-    - name: Save Dist Files
-      run: mv dist $GITHUB_WORKSPACE/dist
+    - name: Archive Dist
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist
+        path: dist
 
   deploy:
     runs-on: ubuntu-latest
@@ -43,8 +46,13 @@ jobs:
     - name: Remove existing files in Pages
       run: rm -rf *
 
+    - name: Download Dist Artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: dist
+
     - name: Copy Dist Files to Pages Branch
-      run: cp -r $GITHUB_WORKSPACE/dist/* .
+      run: cp -r dist/* .
 
     - name: Commit and Push to Pages Branch
       run: |
