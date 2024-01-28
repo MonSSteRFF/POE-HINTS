@@ -47,7 +47,6 @@ jobs:
       - name: Checkout to pages
         run: |
           git pull
-          git branch
           git checkout pages
 
       - name: Download build artifact
