@@ -31,7 +31,8 @@ jobs:
         run: |
           mkdir pages-dist
           cp -r dist/* pages-dist/
-          git checkout pages
+          git branch -a
+          git checkout -b pages
           rm -r .
           cp -r pages-dist/* .
           git add .
