@@ -37,11 +37,14 @@ jobs:
     - name: Switch to Pages Branch
       run: git checkout -b pages
 
-    - name: Copy Dist Files to Pages Branch
-      run: git rm -r .
+    - name: Remove all files except dist
+      run: ls | grep -v dist | xargs rm -rf
 
     - name: Copy Dist Files to Pages Branch
       run: mv dist/* .
+
+    - name: Remove Dist Directory
+      run: rm -rf dist
 
     - name: Commit and Push to Pages Branch
       run: |
