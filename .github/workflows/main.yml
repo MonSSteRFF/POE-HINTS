@@ -44,6 +44,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Show branches
+        run: git branch
+
       - name: Checkout to pages
         run: git checkout pages
 
