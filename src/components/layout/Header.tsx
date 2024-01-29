@@ -34,10 +34,7 @@ const Header = () => {
           POE-HINTS
         </Link>
 
-        <nav
-          ref={menuRef}
-          className={cn(isActiveBurger ? [styles.menu, styles.active] : styles.menu)}
-        >
+        <nav ref={menuRef} className={cn(isActiveBurger ? [styles.menu, styles.active] : styles.menu)}>
           <ul className={styles.menu_list}>
             {Pages.map((link, index) => (
               <li key={index} className={styles.menu_list_item}>

@@ -7,12 +7,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <p>
         {'developed by '}
-        <a
-          href={'https://github.com/MonSSteRFF'}
-          target={'_blank'}
-          className={styles.footer_link}
-          rel="noreferrer"
-        >
+        <a href={'https://github.com/MonSSteRFF'} target={'_blank'} className={styles.footer_link} rel="noreferrer">
           MonSSteR
         </a>
       </p>

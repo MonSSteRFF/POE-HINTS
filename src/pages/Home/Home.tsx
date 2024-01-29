@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { playSound } from '@/components/effect/AudioSounds';
+import { playSound, Sound } from '@/components/effect/AudioSounds';
 import MainLayout from '@/components/layout/MainLayout';
 import { Page, Pages } from '@/router/Pages';
 
@@ -20,7 +20,7 @@ const Home = () => {
     <MainLayout>
       <div className={styles.home}>
         <div className={styles.home_wrapper}>
-          <button onClick={() => playSound('DivineOrb')} className={styles.home_title}>
+          <button onClick={() => playSound(Sound.DivineOrb)} className={styles.home_title}>
             Hello exile!
           </button>
 

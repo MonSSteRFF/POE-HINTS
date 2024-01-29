@@ -1,9 +1,5 @@
 type t_cn = (
-  input:
-    | string[]
-    | string
-    | (() => string[] | string)
-    | Array<string | (() => string[] | string)>,
+  input: string[] | string | (() => string[] | string) | Array<string | (() => string[] | string)>,
 ) => string;
 
 const cn: t_cn = (input) => {
