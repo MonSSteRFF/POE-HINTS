@@ -8,8 +8,8 @@
     "dev": "rm -rf ./dev-dist && vite",
     "build": "rm -rf ./dist && tsc && vite build",
     "serve": "vite preview",
-    "test": "jest",
-    "prepare": "husky"
+    "test": "tsc --toEmit && jest",
+    "prepare": "husky || true"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -44,6 +44,10 @@
   },
   "husky": {
     "hooks": {
+      "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
+      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
+      "post-applypatch": "echo \"[Husky] post-applypatch\"",
+      "pre-commit": "git add .",
       "pre-push": "tsc --noEmit && jest"
     }
   },
