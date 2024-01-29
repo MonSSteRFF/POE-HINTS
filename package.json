@@ -8,7 +8,7 @@
     "dev": "rm -rf ./dev-dist && vite",
     "build": "rm -rf ./dist && tsc && vite build",
     "serve": "vite preview",
-    "test": "tsc --toEmit && jest",
+    "test": "tsc && jest",
     "prepare": "husky || true"
   },
   "dependencies": {
@@ -41,15 +41,6 @@
     "ts-jest": "^29.1.2",
     "typescript": "^5.2.2",
     "vite": "^4.5.0"
-  },
-  "husky": {
-    "hooks": {
-      "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
-      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
-      "post-applypatch": "echo \"[Husky] post-applypatch\"",
-      "pre-commit": "git add .",
-      "pre-push": "tsc --noEmit && jest"
-    }
   },
   "author": {
     "email": "MonsterLPchanel@gmail.com",
