@@ -8,7 +8,7 @@
     "dev": "rm -rf ./dev-dist && vite",
     "build": "rm -rf ./dist && tsc && vite build",
     "serve": "vite preview",
-    "test": "tsc && jest",
+    "test": "eslint --fix --ext .ts,.tsx src && tsc && jest",
     "prepare": "husky || true"
   },
   "dependencies": {

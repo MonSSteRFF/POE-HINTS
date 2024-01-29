@@ -14,14 +14,7 @@ const AppRouter = () => {
         {Pages.map((page, pageIndex) => {
           const item = { ...page, pageIndex };
 
-          return (
-            <Route
-              key={item.pageIndex}
-              path={item.route}
-              element={<item.page />}
-              id={item.name}
-            />
-          );
+          return <Route key={item.pageIndex} path={item.route} element={<item.page />} id={item.name} />;
         })}
       </Routes>
       <Footer />
