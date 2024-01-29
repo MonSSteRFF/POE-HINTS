@@ -1,3 +1,5 @@
+@use '@/styles/typography' as *;
+
 .home {
   display: flex;
   align-items: center;
@@ -7,16 +9,36 @@
   &_wrapper {
     border: 1px var(--white) solid;
     background-color: var(--gray);
-    padding: 15px 10px;
-    min-width: 200px;
-    min-height: 200px;
+    padding: 25px 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
 
+  &_title {
+    @extend %f600_18_22;
+    color: var(--red);
+    background-color: var(--white);
+    padding: 5px;
+    border: 1px var(--red) solid;
+    cursor: pointer;
+  }
+
+  &_description {
+    @extend %f400_14_16;
+    max-width: 600px;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  &_text {
+    @extend %f400_14_16;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
   &_link{
     color: var(--blue);
   }
+
 }
