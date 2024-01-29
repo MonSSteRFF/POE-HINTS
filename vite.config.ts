@@ -9,9 +9,8 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  plugins: [
-    react()
-  ],
+  plugins: [react()],
+  assetsInclude: ['**/*.mp3', '**/*.ogg', '**/*.wav', '**/*.m4a'],
   server: {
     port: 3000,
     host: '127.0.0.1',

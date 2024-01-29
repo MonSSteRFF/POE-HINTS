@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import { Page, Pages } from '@/router/Pages';
 import { cn } from '@/utils/className';
@@ -15,6 +15,7 @@ const Header = () => {
 
   useClickOutside([menuRef, buttonRef], () => setIsActiveBurger(false));
   const pathname = useLocation().pathname;
+  const navigate = useNavigate();
 
   return (
     <header className={styles.header}>
@@ -40,8 +41,11 @@ const Header = () => {
           <ul className={styles.menu_list}>
             {Pages.map((link, index) => (
               <li key={index} className={styles.menu_list_item}>
-                <Link
-                  to={link.route}
+                <button
+                  onClick={() => {
+                    setIsActiveBurger(false);
+                    navigate(link.route);
+                  }}
                   className={cn(
                     pathname.replace('/', '') === link.route.replace('/', '')
                       ? [styles.menu_list_item_link, styles.active]
@@ -49,7 +53,7 @@ const Header = () => {
                   )}
                 >
                   {link.name}
-                </Link>
+                </button>
               </li>
             ))}
           </ul>

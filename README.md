@@ -1,14 +1,14 @@
-# Path of exile hits - POE-HINTS
+# Path of exile hints - [POE-HINTS](https://monssterff.github.io/POE-HINTS/)
 
-### LIST OF FEATURES
+## LIST OF FEATURES
 
-
-
-
+- Essence browse with prices
 
 
 
-### LICENSE
+
+
+## LICENSE
 
 MIT License
 

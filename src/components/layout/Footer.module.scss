@@ -1,18 +1,10 @@
 @use '@/styles/uiKit' as *;
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
 
-  &_wrapper {
-    @extend %container;
-    display: flex;
-    justify-content: flex-end;
-  }
   &_link {
     color: var(--blue);
     text-decoration: underline;

@@ -77,7 +77,9 @@
     &_item{
       &_link{
         @extend %link;
+        @extend %f400_14_16;
         color: var(--white);
+        cursor: pointer;
 
         &:before{
           background-color: var(--white);

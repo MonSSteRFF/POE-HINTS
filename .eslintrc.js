@@ -49,7 +49,7 @@ module.exports = {
         semi: true,
         trailingComma: 'all',
         singleQuote: true,
-        printWidth: 90,
+        printWidth: 120,
         tabWidth: 2,
         endOfLine: 'auto',
       },
@@ -72,5 +72,6 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'react-hooks/exhaustive-deps': 'off',
+    'jsx-a11y/media-has-caption': 'off',
   },
 };

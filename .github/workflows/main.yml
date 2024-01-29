@@ -21,7 +21,7 @@ jobs:
           node-version: '18'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run Tests
         run: npm run test
@@ -44,21 +44,15 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Checkout to pages
-        run: |
-          git pull
-          git checkout pages
-
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
           name: build-artifact
 
-      - name: Display structure of downloaded files
-        run: ls -R
-
       - name: Commit and Push to Pages Branch
         run: |
+          git pull
+          git checkout pages
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git add .
