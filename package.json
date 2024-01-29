@@ -40,6 +40,11 @@
     "typescript": "^5.2.2",
     "vite": "^4.5.0"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "tsc --noEmit && jest"
+    }
+  },
   "author": {
     "email": "MonsterLPchanel@gmail.com",
     "name": "Vladislav"
