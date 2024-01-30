@@ -1,6 +1,5 @@
 import React from 'react';
-
-import { cn } from '@/utils/className';
+import cn from 'simple-class-name';
 
 import styles from './MainLayout.module.scss';
 

@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import cn from 'simple-class-name';
 
 import { Page, Pages } from '@/router/Pages';
-import { cn } from '@/utils/className';
 import { useClickOutside } from '@/utils/useClickOutside';
 
 import styles from './Header.module.scss';
