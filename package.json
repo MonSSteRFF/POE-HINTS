@@ -8,7 +8,10 @@
     "dev": "rm -rf ./dev-dist && vite",
     "build": "rm -rf ./dist && tsc && vite build",
     "serve": "vite preview",
-    "test": "eslint --fix --ext .ts,.tsx src && tsc && jest",
+    "test": "npm run lint && npm run test:types && npm run test:jest",
+    "lint": "eslint --fix --ext .ts,.tsx src ",
+    "test:types": "tsc",
+    "test:jest": "jest",
     "prepare": "husky || true"
   },
   "dependencies": {
