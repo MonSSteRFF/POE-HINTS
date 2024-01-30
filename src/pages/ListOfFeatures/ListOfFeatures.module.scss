@@ -1,0 +1,25 @@
+@use '@/styles/typography' as *;
+
+.title {
+  @extend %f600_18_22;
+  color: var(--text);
+}
+.list {
+  background-color: var(--black);
+  margin-top: 15px;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  &_item{
+    @extend %f400_14_16;
+    color: var(--white);
+    &:not(:last-child){
+      margin-bottom: 10px;
+    }
+    &_link{
+      color: var(--blue);
+    }
+  }
+}

@@ -2,8 +2,7 @@ name: Build and Deploy
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   build:
@@ -49,12 +48,12 @@ jobs:
           find . -maxdepth 1 -type f -not -name '.git*' -exec rm -f {} \;
           git pull
           git checkout pages
-          
+
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
           name: build-artifact
-          
+
       - name: Commit and Push to Pages Branch
         run: |
           git add .
