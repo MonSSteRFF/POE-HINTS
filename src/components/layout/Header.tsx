@@ -44,9 +44,7 @@ const Header = () => {
                     navigate(link.route);
                   }}
                   className={cn(
-                    pathname.replace('/', '') === link.route.replace('/', '')
-                      ? [styles.menu_list_item_link, styles.active]
-                      : styles.menu_list_item_link,
+                    pathname === link.route ? [styles.menu_list_item_link, styles.active] : styles.menu_list_item_link,
                   )}
                 >
                   {link.name}

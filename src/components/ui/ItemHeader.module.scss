@@ -1,0 +1,21 @@
+@use '@/styles/typography' as *;
+
+.header {
+  display: flex;
+  background-image: url("../../assets/images/ItemHeader.png");
+
+  height: 32px;
+  align-items: center;
+  justify-content: space-between;
+
+  &_side {
+    display: block;
+    height: 32px;
+    width: 29px;
+    background: url("../../assets/images/ItemHeader.png") no-repeat;
+  }
+
+  &_name {
+    @extend %f400_20_20;
+  }
+}

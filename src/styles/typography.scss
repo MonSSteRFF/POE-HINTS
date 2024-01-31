@@ -14,8 +14,14 @@
   &_14_16 {
     @include font(400, 14px, 16px)
   }
+  &_15_15 {
+    @include font(400, 15px, 15px)
+  }
   &_18_20 {
     @include font(400, 18px, 20px)
+  }
+  &_20_20 {
+    @include font(400, 20px, 20px)
   }
 }
 

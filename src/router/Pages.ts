@@ -4,8 +4,8 @@ import ListOfFeatures from '@/pages/ListOfFeatures/ListOfFeatures';
 
 export enum Page {
   Home = '/',
-  Essence = 'Essence',
-  ListOfFeatures = 'ListOfFeatures',
+  Essence = '/Essence',
+  ListOfFeatures = '/ListOfFeatures',
 }
 
 export const Pages = [
